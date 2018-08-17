@@ -35,6 +35,7 @@ class GetHandler(BaseHTTPRequestHandler):
         message_parts.append('')
         message = '\r\n'.join(message_parts)
         self.send_response(200)
+        #このヘッダーを入れないとresponseがはじかれる
         self.send_header("Access-Control-Allow-Origin", "*")
         self.end_headers()
         self.wfile.write(message.encode())
