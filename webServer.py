@@ -3,8 +3,8 @@ from http.server import BaseHTTPRequestHandler
 from socketserver import ThreadingMixIn
 import urllib
 
+#マルチスレッドにしたHTTPServer
 class ThreadedHTTPServer(ThreadingMixIn, HTTPServer):
-    """マルチスレッド化した HTTPServer"""
     pass
 
 class GetHandler(BaseHTTPRequestHandler):
